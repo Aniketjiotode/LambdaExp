@@ -42,5 +42,10 @@ namespace Regex_
            string res=$"Name:{FullName},Email:{EmailId},PhoneNumber:{PhoneNum},Password:{PasswordId}";
             return res ;
         }
+        public bool EmailCheck(string emails)
+        {
+            Regex r= new Regex(Email);
+            return r.IsMatch(emails);
+        }
     }
 }
