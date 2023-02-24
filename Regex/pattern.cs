@@ -20,26 +20,30 @@ namespace Regex_
             //string Fnames = Console.ReadLine();
              Console.WriteLine(r1.IsMatch(Fname));
             if (r1.IsMatch(Fname))
-                 FullName = Fname;
+                FullName = Fname;
+            else throw new Exception("Invalid Name");
             Regex r2 = new Regex(Email);
             Console.WriteLine("Enter the EmailId:");
             //string emails = Console.ReadLine();
             Console.WriteLine(r2.IsMatch(email));
             if (r2.IsMatch(email))
                 EmailId = email;
+            else throw new Exception("Invalid EmailId");
             Regex r3 = new Regex(PhoneNumber);
             Console.WriteLine("Enter the PhoneNumber:");
             //string phonenums = Console.ReadLine();
             Console.WriteLine(r3.IsMatch(phonenum));
             if (r3.IsMatch(phonenum))
                 PhoneNum = phonenum;
+            else throw new Exception("Invalid phoneNumber");
             Regex r4 = new Regex(Password);
             Console.WriteLine("Enter the Password:");
             //string passwords = Console.ReadLine();
             Console.WriteLine(r4.IsMatch(password));
             if (r4.IsMatch(password))
                 PasswordId = password;
-           string res=$"Name:{FullName},Email:{EmailId},PhoneNumber:{PhoneNum},Password:{PasswordId}";
+            else throw new Exception("Invalid password");
+            string res=$"Name:{FullName},Email:{EmailId},PhoneNumber:{PhoneNum},Password:{PasswordId}";
             return res ;
         }
         public bool EmailCheck(string emails)
