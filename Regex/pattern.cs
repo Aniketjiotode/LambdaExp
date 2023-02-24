@@ -20,7 +20,7 @@ namespace Regex_
             //string Fnames = Console.ReadLine();
              Console.WriteLine(r1.IsMatch(Fname));
             if (r1.IsMatch(Fname))
-                FullName = Fname;
+                 FullName = Fname;
             Regex r2 = new Regex(Email);
             Console.WriteLine("Enter the EmailId:");
             //string emails = Console.ReadLine();
